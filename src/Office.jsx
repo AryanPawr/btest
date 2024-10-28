@@ -212,7 +212,7 @@ const Office = () => {
 
   return (
     <div className="real-estate-calculator-container">
-      <h1>Real Estate Calculator(Office)</h1>
+      <h1>Potential ROI Calculator(Office)</h1>
       <div className="form-section">
         <div className="input-container">
           <div className="input-column">
@@ -264,7 +264,7 @@ const Office = () => {
               onChange={handleInputChange(setexitrate)}
             />
             <InputField
-              label="Rent:"
+              label="Rent/sq.ft:"
               value={Rent}
               onChange={handleInputChange(setRent)}
             />

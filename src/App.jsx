@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <div className="real-estate-calculator-container">
-      <h1>Real Estate Calculator</h1>
+      <h1>Realty Entrepreneurship Launchpad</h1>
       <div className="theme-toggle">
         <label htmlFor="toggle" className="toggle-label">
           <input type="checkbox" id="toggle" checked={isLightMode} onChange={handleToggleChange} />
