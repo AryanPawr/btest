@@ -1,0 +1,149 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White background for form area */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Heading styles */
+  h2 {
+    color: #003366; /* Dark blue for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  /* Property container styles */
+  .property-container {
+    margin-bottom: 20px;
+    border: 2px solid #003366; /* Dark blue border */
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #e8f0fe; /* Light blue background for each property */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+  }
+  
+  .property-container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Input group styles */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #003366; /* Dark blue text */
+    font-weight: bold; /* Bold labels for emphasis */
+  }
+  
+  .input-group input[type="text"],
+  .input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #003366; /* Dark blue border */
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Smooth transition for focus */
+  }
+  
+  .input-group input[type="text"]:focus,
+  .input-group input[type="file"]:focus {
+    border-color: #00509e; /* Change border color on focus */
+  }
+  
+  /* Image preview styles */
+  .images-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .images-preview img {
+    max-width: 120px; /* Increased width for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+  }
+  
+  /* Specifications table styles */
+  .specifications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .specifications-table th,
+  .specifications-table td {
+    border: 2px solid #003366; /* Dark blue border */
+    padding: 10px;
+    text-align: center;
+    color: #003366; /* Dark blue text */
+    font-weight: normal; /* Normal weight for table content */
+  }
+  
+  .specifications-table th {
+    background-color: #003366; /* Dark blue background for header */
+    color: #fff; /* White text for header */
+    font-size: 1.1em; /* Slightly larger header text */
+  }
+  
+  /* Button styles */
+  .add-property-btn,
+  .generate-pdf-btn {
+    background-color: #003366; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  }
+  
+  .add-property-btn:hover,
+  .generate-pdf-btn:hover {
+    background-color: #00509e; /* Lighter blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  /* Watermark styles */
+  .watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.1; /* Light opacity for watermark */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .images-preview img {
+      max-width: 90px; /* Adjusted image size for smaller screens */
+    }
+  
+    .input-group input[type="text"],
+    .input-group input[type="file"] {
+      padding: 8px; /* Smaller padding for mobile */
+    }
+  
+    h2 {
+      font-size: 1.5em; /* Smaller heading size for mobile */
+    }
+  }
+  

@@ -1,42 +1,279 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text for contrast */
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Main Container */
+.real-estate-calculator-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(30, 30, 30, 0.9);
+  border-radius: 8px;
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for container */
+}
+
+/* Header Styles */
+.real-estate-calculator-container h1 {
+  color: #ffcc00;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.real-estate-calculator-container h2 {
+  color: #00aaff;
+  margin-bottom: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+/* Input Fields */
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #00aaff;
+  border-radius: 4px;
+  background-color: #333;
+  color: #ffffff;
+  transition: border-color 0.3s, background-color 0.3s; /* Added background color transition */
+}
+
+input[type="number"]:focus {
+  border-color: #ffcc00;
+  outline: none;
+  background-color: #444; /* Darker background on focus */
+}
+
+/* Button Styles */
+button {
+  background-color: #00aaff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+button:hover {
+  background-color: #0077cc;
+  transform: translateY(-1px); /* Slight lift on hover */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+th {
+  background-color: #1a1a1a;
+  color: #ffcc00;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #222;
+}
+
+tbody tr:hover {
+  background-color: #333;
+}
+
+/* Section Styles */
+.calculated-values-section,
+.roi-calculations-section,
+.financial-overview-section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #ffffff; /* Light background */
+  color: #333333; /* Dark text for contrast */
+}
+
+body.light-mode .real-estate-calculator-container {
+  background: #f0f4f8; /* Softer light background for container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+body.light-mode h1,
+body.light-mode h2 {
+  color: #333; /* Darker colors for text */
+  margin-bottom: 15px; /* Space below headings for better separation */
+}
+
+body.light-mode h1 {
+  font-size: 2.5rem; /* Larger size for main title */
+}
+
+body.light-mode h2 {
+  font-size: 1.8rem; /* Slightly larger size for section titles */
+}
+
+body.light-mode input[type="number"] {
+  background-color: #ffffff; /* White background for inputs */
+  color: #333; /* Dark text for inputs */
+  border: 1px solid #007BFF; /* Blue border for focus */
+  border-radius: 4px; /* Rounded corners for inputs */
+  padding: 12px; /* Padding for a comfortable feel */
+  transition: border-color 0.3s; /* Smooth border transition on focus */
+}
+
+body.light-mode input[type="number"]:focus {
+  border-color: #0056b3; /* Darker blue when focused */
+  outline: none; /* Remove default outline */
+}
+
+body.light-mode button {
+  background-color: #007BFF; /* Blue background for button */
+  color: white; /* White text for buttons */
+  padding: 10px 20px; /* Comfortable padding */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+body.light-mode button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+body.light-mode table {
+  width: 100%; /* Full width for tables */
+  border-collapse: collapse; /* Merge borders */
+  margin-bottom: 20px; /* Space below tables */
+}
+
+body.light-mode th {
+  background-color: #007BFF; /* Blue background for headers */
+  color: white; /* White text for headers */
+  padding: 12px; /* Padding for headers */
+  text-align: left; /* Align text to the left */
+}
+
+body.light-mode td {
+  padding: 12px; /* Padding for cells */
+  border: 1px solid #e0e0e0; /* Light border for cells */
+}
+
+body.light-mode tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+body.light-mode tbody tr:hover {
+  background-color: #e0f7fa; /* Light blue on hover for rows */
+}
+
+body.light-mode .calculated-values-section,
+body.light-mode .roi-calculations-section,
+body.light-mode .financial-overview-section {
+  background-color: #ffffff; /* White background for sections */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for sections */
+  margin-bottom: 20px; /* Space below sections */
+}
+
+/* Additional improvements */
+body.light-mode .theme-toggle {
+  margin-bottom: 20px; /* Space below toggle */
+}
+
+body.light-mode .toggle-text {
+  margin-left: 10px; /* Space between toggle and text */
+  font-weight: 500; /* Slightly bolder text */
+}
+
+
+/* Toggle Switch Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: background-color 0.4s; /* Smooth background transition */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s; /* Smooth transform transition */
+}
+
+input:checked + .slider {
+  background-color: #00aaff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .input-container {
+      flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-column {
+      margin: 0;
+      margin-bottom: 10px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
